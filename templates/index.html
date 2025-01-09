@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Πέτρα, Ψαλίδι, Χαρτί</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <body>
+
+        <!-- Στατιστικά -->
+        <div class="stats-frame">
+            <h2>Στατιστικά:</h2>
+            <p id="stats">Νίκες: 0, Ήττες: 0, Ισοπαλίες: 0</p>
+            <button onclick="showDetailedStats()">Περισσότερα</button>
+        </div>
+    
+        <!-- Κεντρικό Πλαίσιο -->
+        <div class="container">
+            <h2>Καλωσήρθατε στο παιχνίδι Πέτρα / Ψαλίδι / Χαρτί</h2>
+            <!-- Πλαίσιο Κειμένου -->
+            <div class="text-frame">
+                <p><h3><u>Δοκιμάστε να καταλάβετε πως επιλέγει ο Η/Υ</u></h3></p>
+            </div>
+    
+            <!-- Πλαίσιο Εικόνων -->
+        <div class="image-frame">
+            <p id="placeholder-message">🎮 Επιλέξτε για να ξεκινήσετε το παιχνίδι! 🎮</p>
+            <img id="user-image" src="" alt="Η επιλογή σας" class="hidden">
+            <img id="computer-image" src="" alt="Η επιλογή του υπολογιστή" class="hidden">
+        </div>
+    
+            <!-- Πλαίσιο Κουμπιών -->
+            <div class="button-frame">
+                <button class="button" onclick="play('Πέτρα')">Πέτρα</button>
+                <button class="button" onclick="play('Χαρτί')">Χαρτί</button>
+                <button class="button" onclick="play('Ψαλίδι')">Ψαλίδι</button>
+            </div>
+        </div>
+    </body>
+
+    <script src="static/script.js"></script>
+</body>
+</html>

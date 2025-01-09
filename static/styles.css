@@ -1,0 +1,129 @@
+/* Γενικές Ρυθμίσεις */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 20px; /* Προσθήκη περιθωρίου για όλο το περιεχόμενο */
+    height: auto; /* Κατάργηση της αυστηρής ρύθμισης του ύψους */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    color: #333;
+    animation: gradient-animation 6s infinite;
+    background-size: 400% 400%;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 70%; /* Μείωση του πλάτους */
+    max-width: 600px; /* Περιορισμός στο μέγιστο πλάτος */
+    background: #caf0f8;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    margin: 0 auto; /* Κεντράρισμα οριζόντια */
+}
+
+/* Στυλ για τα Πλαίσια */
+.container > div {
+    width: 100%;
+    height: 75px;
+    padding: 15px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0px 5px 10px #00b4d8;
+}
+
+.hidden {
+    display: none; /* Εξαφανίζει τα στοιχεία */
+}
+
+#placeholder-message {
+    font-size: 18px; /* Μέγεθος γραμματοσειράς για το μήνυμα */
+    color: #555; /* Χρώμα κειμένου */
+    text-align: center; /* Κεντράρισμα */
+    margin: 20px 0; /* Απόσταση από τα υπόλοιπα στοιχεία */
+}
+
+/* Πλαίσιο Εικόνων */
+.image-frame img {
+    width: 120px;
+    height: 100px;
+    object-fit:contain;
+    transition: transform 0.3s ease;
+}
+
+.image-frame img:hover {
+    transform: rotate(15deg) scale(1.2);
+}
+
+.button-frame {
+    display: flex;
+    gap: 15px;
+    justify-content: center; /* Κεντράρει τα κουμπιά οριζόντια */
+    align-items: center; /* Κεντράρει τα κουμπιά κάθετα */
+}
+
+.button {
+    padding: 15px 25px;
+    font-size: 18px;
+    color: white;
+    background: #ff6f61;
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.button:hover {
+    background: #ff4a3e;
+    transform: scale(1.1);
+}
+
+.stats-frame {
+    position: absolute; /* Τοποθετεί το πλαίσιο εκτός της ροής της σελίδας */
+    top: 20px; /* Απόσταση από την κορυφή */
+    left: 20px; /* Απόσταση από την αριστερή πλευρά */
+    width: 150px; /* Περιορισμός πλάτους */
+    padding: 10px;
+    background: #90e0ef; /* Ελαφριά διαφάνεια */
+    font-size: 14px;
+    box-shadow: 0px 5px 15px rgba(255, 215, 0, 0.4);
+    border-radius: 10px;
+    text-align: left;
+    z-index: 15; /* Διασφαλίζει ότι είναι μπροστά */
+}
+
+
+.stats-frame button {
+    background: #ff6f61;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.stats-frame button:hover {
+    background: #ff4a3e;
+}
